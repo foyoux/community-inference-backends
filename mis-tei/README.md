@@ -1,10 +1,10 @@
-# MIS-TEI Custom Backend
+# mis-tei Custom Backend
 
 ## Overview
 
-[**MIS-TEI**](https://www.hiascend.com/developer/ascendhub/detail/07a016975cc341f3a5ae131f2b52399d) is an inference service for text embedding and reranking models in the Ascend ecosystem. It provides efficient vector generation and relevance scoring capabilities, commonly used in RAG, semantic search, and retrieval systems.
+[**mis-tei**](https://www.hiascend.com/developer/ascendhub/detail/07a016975cc341f3a5ae131f2b52399d) is an inference service for text embedding and reranking models in the Ascend ecosystem. It provides efficient vector generation and relevance scoring capabilities, commonly used in RAG, semantic search, and retrieval systems.
 
-Built on the Ascend CANN stack, MIS-TEI supports multiple embedding and reranker models with optimized performance on Ascend hardware.
+Built on the Ascend CANN stack, mis-tei supports multiple embedding and reranker models with optimized performance on Ascend hardware.
 
 This custom backend uses a repackaged container image to simplify deployment and integration within GPUStack environments.
 
@@ -71,10 +71,10 @@ exec text-embeddings-router --hostname 0.0.0.0 "$@"
 
 ## GPUStack Backend Configuration
 
-Use the following configuration to register the MIS-TEI backend in GPUStack:
+Use the following configuration to register the mis-tei backend in GPUStack:
 
 ```yaml
-backend_name: MIS-TEI
+backend_name: mis-tei
 health_check_path: /
 default_run_command: --model-id {{model_path}} -p {{port}}
 
@@ -294,7 +294,7 @@ Options:
 
 This custom backend:
 
-* Simplifies deployment of MIS-TEI in GPUStack
+* Simplifies deployment of mis-tei in GPUStack
 * Provides a cleaner and more flexible startup process
 * Enables full compatibility with original runtime parameters
 * Optimizes usability for Ascend-based embedding and reranking workloads
