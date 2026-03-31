@@ -75,15 +75,24 @@ Use the following configuration to register the mis-tei backend in GPUStack:
 
 ```yaml
 backend_name: mis-tei
-health_check_path: /
-default_run_command: --model-id {{model_path}} -p {{port}}
+health_check_path: /health
 
+default_run_command: --model-id {{model_path}} -p {{port}}
+default_env:
+  ENABLE_BOOST: "True"
+  AUTO_TRUNCATE: "true"
+  
 version_configs:
-  v7.3.0:
+  7.3.0-a2:
     image_name: gpustackcommunity/mis-tei:7.3.0-800I-A2-aarch64
     custom_framework: cann
-
-default_version: v7.3.0
+  7.3.0-a3:
+    image_name: gpustackcommunity/mis-tei:7.3.0-800I-A3-aarch64
+    custom_framework: cann
+  7.3.0-310p:
+    image_name: gpustackcommunity/mis-tei:7.3.0-300I-Duo-aarch64
+    custom_framework: cann
+default_version: v7.3.0-a2
 ```
 
 ---
