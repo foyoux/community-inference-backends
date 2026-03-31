@@ -4,7 +4,7 @@ description: |
   It provides efficient vector generation and relevance scoring capabilities, commonly used in RAG, semantic search, and retrieval systems.
   Based on the Ascend CANN stack, it supports multiple embedding and reranker models with optimized performance on Ascend hardware.
   This backend uses a repackaged image to simplify deployment and integration within GPUStack environments.
-health_check_path: /
+health_check_path: /health
 default_run_command: --model-id {{model_path}} -p {{port}}
 default_env:
   ENABLE_BOOST: "True"
