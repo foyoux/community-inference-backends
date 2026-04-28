@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: auto-pr-to-gpustack-main
+  cancel-in-progress: true
+
 jobs:
   build-and-pr:
     runs-on: ubuntu-latest
